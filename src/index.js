@@ -1,6 +1,6 @@
 // @flow
 import React, {Component} from 'react';
-
+import ReactDOM from 'react-dom';
 type Props = {
 
 }
@@ -20,6 +20,10 @@ class App extends Component<Props> {
   }
 }
 
+const rootElement = document.querySelector('#root');
+if(App !== null && rootElement !== null) {
+  ReactDOM.render(<App />, rootElement);
+}
 export default App;
 
 
